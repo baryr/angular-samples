@@ -1,0 +1,53 @@
+Prerequisites:
+ # install custom version of typescript:
+ npm install -g typescript@2.4.2
+ 
+ # uninstal any old version of angular cli 
+ npm uninstall -g @angular/cli
+ npm uninstall -g angular-cli
+ npm cache clean
+
+ # install angular cli (and peer dependency yarn)
+ npm install -g @angular/cli@1.5.3
+ npm install -g yarn
+ 
+ # this seems to be required as well to make 'ng new ...' working
+ npm install -g @angular-devkit/core
+
+ # this seems to be required as well to make 'ng serve' working
+ npm i --save-dev @angular-devkit/core
+
+
+
+Generate code:
+
+ # create app skeleton:
+ ng new angularmaterial
+
+ # start app by:
+ ng serve
+
+ # access localhost:4200
+ http://localhost:4200/
+
+ # install angular material and cdk (component cevelopment kit)
+ npm install --save @angular/material @angular/cdk
+
+ # install angular animation module required by material components
+ npm install --save @angular/animations
+
+ # generate new module that wraps angular materials
+ ng g m shared/material --flat --dry-run 
+ ng g m shared/material --flat
+
+ # available components can be found here:
+ https://material.angular.io/components/categories
+
+ # install hammerjs for gesture support ?
+ npm install -save hammerjs
+
+# link material icons:
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+# install angular flex layout
+npm install --save @angular/flex-layout
